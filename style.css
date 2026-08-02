@@ -1,0 +1,284 @@
+/* ===== RESET DASAR =====
+   Browser punya style default yang beda-beda (margin, padding).
+   Kita reset dulu biar semua konsisten. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIABEL WARNA BRAND =====
+   Simpan warna di satu tempat, biar gampang diubah nanti */
+:root {
+  --navy: #0F1E3D;
+  --navy-light: #16295C;
+  --orange: #E85D25;
+  --white: #FFFFFF;
+  --gray-light: #F4F5F7;
+  --gray-text: #4A5568;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--navy);
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: var(--white);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header {
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: 0.5px;
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--orange);
+}
+
+/* ===== HAMBURGER MENU (default tersembunyi di layar besar) ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--navy);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 56px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.hero .tagline {
+  font-size: 18px;
+  color: #C9D2E8;
+  max-width: 500px;
+  margin: 0 auto 32px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--orange);
+  color: var(--white);
+  padding: 14px 36px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(232, 93, 37, 0.4);
+}
+
+/* ===== SECTION UMUM ===== */
+section {
+  padding: 70px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.produk {
+  background-color: var(--gray-light);
+  max-width: 100%;
+}
+
+.tentang p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--gray-text);
+  font-size: 17px;
+}
+
+/* ===== GRID PRODUK ===== */
+.produk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  margin-top: 20px;
+}
+
+.produk-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(15, 30, 61, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.produk-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(15, 30, 61, 0.14);
+}
+
+.produk-img-placeholder {
+  background-color: #E2E6ED;
+  color: #8A93A6;
+  height: 180px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.produk-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.produk-desc {
+  color: var(--gray-text);
+  font-size: 14px;
+  min-height: 42px;
+  margin-bottom: 12px;
+}
+
+.produk-harga {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+
+.btn-wa {
+  display: inline-block;
+  background-color: #25D366;
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  width: 100%;
+  transition: opacity 0.2s ease;
+}
+
+.btn-wa:hover,
+.btn-wa:focus-visible {
+  opacity: 0.85;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 24px;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIVE: tampilan HP ===== */
+@media (max-width: 600px) {
+  header {
+    padding: 16px 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  }
+
+  nav.open {
+    max-height: 300px;
+  }
+
+  nav a {
+    margin: 0;
+    padding: 14px 20px;
+    border-top: 1px solid #EEE;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  section {
+    padding: 50px 20px;
+  }
+}
