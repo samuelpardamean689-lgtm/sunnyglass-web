@@ -19,9 +19,13 @@
 }
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   color: var(--navy);
   line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
 }
 
 /* ===== HEADER ===== */
@@ -98,21 +102,47 @@ nav a:focus-visible {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   color: var(--white);
   text-align: center;
-  padding: 100px 20px;
+  padding: 110px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(232,93,37,0.25) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+  border-radius: 50%;
 }
 
 .hero h1 {
-  font-size: 56px;
+  font-size: 60px;
   font-weight: 900;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   margin-bottom: 16px;
+  position: relative;
 }
 
 .hero .tagline {
   font-size: 18px;
   color: #C9D2E8;
-  max-width: 500px;
+  max-width: 520px;
   margin: 0 auto 32px;
+  position: relative;
 }
 
 .btn {
@@ -159,6 +189,43 @@ section h2 {
   font-size: 17px;
 }
 
+/* ===== FITUR / KENAPA PILIH KAMI ===== */
+.fitur-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.fitur-card {
+  text-align: center;
+  padding: 28px 20px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--gray-light) 100%);
+  border: 1px solid #E9ECF2;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fitur-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(15, 30, 61, 0.1);
+}
+
+.fitur-icon {
+  font-size: 34px;
+  margin-bottom: 14px;
+}
+
+.fitur-card h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.fitur-card p {
+  font-size: 14px;
+  color: var(--gray-text);
+}
+
 /* ===== GRID PRODUK ===== */
 .produk-grid {
   display: grid;
@@ -169,16 +236,17 @@ section h2 {
 
 .produk-card {
   background-color: var(--white);
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 14px;
+  padding: 22px;
   text-align: center;
   box-shadow: 0 4px 14px rgba(15, 30, 61, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #EEF0F4;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .produk-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(15, 30, 61, 0.14);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(15, 30, 61, 0.16);
 }
 
 .produk-img {
