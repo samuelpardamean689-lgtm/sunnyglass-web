@@ -181,16 +181,13 @@ section h2 {
   box-shadow: 0 8px 24px rgba(15, 30, 61, 0.14);
 }
 
-.produk-img-placeholder {
-  background-color: #E2E6ED;
-  color: #8A93A6;
-  height: 180px;
+.produk-img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background-color: #F4F5F7;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 600;
+  display: block;
   margin-bottom: 16px;
 }
 

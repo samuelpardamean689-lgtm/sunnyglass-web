@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://samuelpardamean689-lgtm.github.io/sunnyglass-web/sitemap.xml
