@@ -22,12 +22,16 @@ body {
   font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   color: var(--navy);
   line-height: 1.6;
-  background-color: #FBFBFD;
+  background-color: #F7F8FB;
   background-image:
-    radial-gradient(circle at 10% 10%, rgba(15,30,61,0.03) 0%, transparent 45%),
-    radial-gradient(circle at 90% 20%, rgba(232,93,37,0.04) 0%, transparent 45%),
-    radial-gradient(circle at 30% 90%, rgba(15,30,61,0.03) 0%, transparent 45%);
+    radial-gradient(circle at 10% 10%, rgba(15,30,61,0.06) 0%, transparent 45%),
+    radial-gradient(circle at 90% 20%, rgba(232,93,37,0.07) 0%, transparent 45%),
+    radial-gradient(circle at 30% 90%, rgba(15,30,61,0.06) 0%, transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(232,93,37,0.05) 0%, transparent 40%),
+    url('images/bg-pattern.svg');
   background-attachment: fixed;
+  background-repeat: repeat, repeat, repeat, repeat, repeat;
+  background-size: auto, auto, auto, auto, 800px 800px;
 }
 
 h1, h2, h3, .logo {
@@ -238,10 +242,10 @@ section h2 {
 }
 
 .produk {
-  background: linear-gradient(180deg, var(--gray-light) 0%, #EEF1F6 100%);
+  background: linear-gradient(180deg, rgba(244,245,247,0.5) 0%, rgba(238,241,246,0.45) 100%);
   max-width: 100%;
-  border-top: 1px solid #E4E8EF;
-  border-bottom: 1px solid #E4E8EF;
+  border-top: 1px solid rgba(228,232,239,0.6);
+  border-bottom: 1px solid rgba(228,232,239,0.6);
 }
 
 .tentang p {
@@ -253,6 +257,35 @@ section h2 {
 }
 
 /* ===== FITUR / KENAPA PILIH KAMI ===== */
+.fitur {
+  background: linear-gradient(180deg, rgba(246,248,252,0.55) 0%, rgba(238,241,248,0.5) 50%, rgba(246,248,252,0.55) 100%);
+  position: relative;
+}
+
+.fitur::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(232,93,37,0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.fitur::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(15,30,61,0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
 .fitur-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -264,8 +297,11 @@ section h2 {
   text-align: center;
   padding: 28px 20px;
   border-radius: 12px;
-  background: linear-gradient(180deg, #FFFFFF 0%, var(--gray-light) 100%);
-  border: 1px solid #E9ECF2;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 4px 18px rgba(15, 30, 61, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -299,12 +335,14 @@ section h2 {
 
 .produk-card {
   position: relative;
-  background-color: var(--white);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-radius: 14px;
   padding: 22px;
   text-align: center;
   box-shadow: 0 4px 14px rgba(15, 30, 61, 0.08);
-  border: 1px solid #EEF0F4;
+  border: 1px solid rgba(255,255,255,0.5);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDBA74" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#E85D25" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#E85D25" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bubbleGrad" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#7FB3E0" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0F1E3D" stop-opacity="0.12"/>
+    </radialGradient>
+    <linearGradient id="bottleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16295C" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0F1E3D" stop-opacity="0.10"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Cahaya matahari besar di tengah -->
+  <circle cx="400" cy="400" r="260" fill="url(#sunGlow)"/>
+  <g stroke="#E85D25" stroke-opacity="0.10" stroke-width="2">
+    <line x1="400" y1="400" x2="400" y2="60"/>
+    <line x1="400" y1="400" x2="620" y2="120"/>
+    <line x1="400" y1="400" x2="740" y2="300"/>
+    <line x1="400" y1="400" x2="740" y2="500"/>
+    <line x1="400" y1="400" x2="620" y2="680"/>
+    <line x1="400" y1="400" x2="400" y2="740"/>
+    <line x1="400" y1="400" x2="180" y2="680"/>
+    <line x1="400" y1="400" x2="60" y2="500"/>
+    <line x1="400" y1="400" x2="60" y2="300"/>
+    <line x1="400" y1="400" x2="180" y2="120"/>
+  </g>
+
+  <!-- Siluet botol semprot (kiri atas) -->
+  <g transform="translate(60,70) rotate(-8)" fill="url(#bottleGrad)">
+    <rect x="20" y="40" width="46" height="110" rx="10"/>
+    <rect x="30" y="10" width="26" height="34" rx="6"/>
+    <rect x="55" y="18" width="34" height="12" rx="4"/>
+  </g>
+
+  <!-- Siluet mobil (kanan bawah) -->
+  <g transform="translate(560,600)" fill="none" stroke="#0F1E3D" stroke-opacity="0.10" stroke-width="3">
+    <path d="M0,50 Q10,20 40,18 L120,18 Q150,20 160,50 L165,60 L-5,60 Z"/>
+    <circle cx="25" cy="62" r="14"/>
+    <circle cx="135" cy="62" r="14"/>
+  </g>
+
+  <!-- Siluet knalpot/motor (kiri bawah) -->
+  <g transform="translate(50,600)" fill="none" stroke="#E85D25" stroke-opacity="0.12" stroke-width="3">
+    <ellipse cx="60" cy="40" rx="55" ry="16"/>
+    <circle cx="15" cy="40" r="16"/>
+  </g>
+
+  <!-- Gelembung sabun besar & kecil tersebar -->
+  <circle cx="150" cy="250" r="46" fill="url(#bubbleGrad)"/>
+  <circle cx="210" cy="200" r="18" fill="url(#bubbleGrad)"/>
+  <circle cx="650" cy="180" r="52" fill="url(#bubbleGrad)"/>
+  <circle cx="700" cy="130" r="20" fill="url(#bubbleGrad)"/>
+  <circle cx="120" cy="480" r="30" fill="url(#bubbleGrad)"/>
+  <circle cx="700" cy="440" r="40" fill="url(#bubbleGrad)"/>
+  <circle cx="480" cy="150" r="24" fill="url(#bubbleGrad)"/>
+  <circle cx="330" cy="620" r="34" fill="url(#bubbleGrad)"/>
+  <circle cx="420" cy="700" r="16" fill="url(#bubbleGrad)"/>
+
+  <!-- Kilau bintang -->
+  <g fill="#FFFFFF" fill-opacity="0.55">
+    <path d="M180 130 l4 12 12 4 -12 4 -4 12 -4 -12 -12 -4 12 -4 z"/>
+    <path d="M620 300 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3 z"/>
+    <path d="M100 380 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3 z"/>
+    <path d="M560 620 l4 11 11 4 -11 4 -4 11 -4 -11 -11 -4 11 -4 z"/>
+    <path d="M300 100 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 z"/>
+  </g>
+
+  <!-- Riak air / droplet -->
+  <g stroke="#0F1E3D" stroke-opacity="0.10" stroke-width="2" fill="none">
+    <circle cx="250" cy="720" r="16"/>
+    <circle cx="250" cy="720" r="28"/>
+  </g>
+  <path d="M760 600 C760 585, 772 575, 772 575 C772 575, 784 585, 784 600 C784 608, 778 614, 772 614 C766 614, 760 608, 760 600 Z" fill="#0F1E3D" fill-opacity="0.08"/>
+</svg>
