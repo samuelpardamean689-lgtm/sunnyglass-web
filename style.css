@@ -228,6 +228,23 @@ nav a:focus-visible {
   box-shadow: 0 6px 16px rgba(232, 93, 37, 0.4);
 }
 
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  position: relative;
+}
+
+.btn-shopee {
+  background-color: #EE4D2D;
+}
+
+.btn-shopee:hover,
+.btn-shopee:focus-visible {
+  box-shadow: 0 6px 16px rgba(238, 77, 45, 0.4);
+}
+
 /* ===== SECTION UMUM ===== */
 section {
   padding: 70px 40px;
